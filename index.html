@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price</title>
+    <h1>Prediction Page</h1>
+    <h2>Please enter the values below</h2>
+</head>
+<body>
+    <form action = "{{url_for('predict')}}" method="post">
+        <div>
+            <label for="area">area:</label>
+            <input type="text" id="area" name="area" placeholder="please enter area values here">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="bedrooms">bedrooms:</label>
+            <input type="text" id="bedrooms" name="bedrooms" placeholder="enter no of bedrooms">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="bathrooms">bathrooms:</label>
+            <input type="text" id="bathrooms" name="bathrooms" placeholder="enter no of bathrooms">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="stories">stories:</label>
+            <input type="text" id="stories" name="stories" placeholder="enter values here">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="mainroad">mainroad:</label>
+            <input type="text" id="mainroad" name="mainroad" placeholder="enter values here">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="guestroom">guestroom:</label>
+            <input type="text" id="guestroom" name="guestroom" placeholder="enter values here">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="basement">basement:</label>
+            <input type="text"id="basement" name="basement" placeholder="enter values here">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="hotwaterheating">hotwaterheating:</label>
+            <input type="text" id="hotwaterheating" name="hotwaterheating" placeholder="enter values here">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="airconditioning">airconditioning:</label>
+            <input type="text" id="airconditioning" name="airconditioning" placeholder="enter values here">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="parking">parking:</label>
+            <input type="text" id="parking" name="parking" placeholder="enter parking values here">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="prefarea">prefarea:</label>
+            <input type="text" id="prefarea" name="prefarea" placeholder="enter prefarea values here">
+        </div>
+
+        <br>
+
+        <div>
+            <label for="furnishingstatus">furnishingstatus:</label>
+            <input type="text" id="furnishingstatus" name="furnishingstatus" placeholder="enter values here">
+        </div>
+
+        <br>
+
+        <input type="submit" value="Predict">
+        
+        <br>
+        <br>
+
+        {{ prediction_text }}
+        
+        <br>
+
+        {{ new_price_text }}
+
+
+    </form>
+</body>
+</html>
